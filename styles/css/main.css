@@ -1,17 +1,17 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use "./styles/sass/layout/global-rules";
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   styles/sass/main.scss 1:1  root stylesheet */
 
-:root {
-  --primary: #9356dc;
-  --secondary: #ff79da;
-  --tertiary: #99e2d0;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use \"./styles/sass/layout/global-rules\";\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   styles/sass/main.scss 1:1  root stylesheet";
 }
-
-body {
-  width: 100%;
-}
-
-/*# sourceMappingURL=main.css.map */
