@@ -1,2 +1,8 @@
-
-
+@use "./layout/global-rules" as *;
+@use "./helpers/variables" as *;
+body {
+  color: $primary_color;
+  header {
+    color: $teritiary_color;
+  }
+}
