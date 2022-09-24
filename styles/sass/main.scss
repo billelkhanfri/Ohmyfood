@@ -1,8 +1,7 @@
-@use "./layout/global-rules" as *;
-@use "./helpers/variables" as *;
-body {
-  color: $primary_color;
-  header {
-    color: $teritiary_color;
-  }
-}
+@use "./base/global-rules" as *;
+@use "./abstract/variables" as *;
+@use "./layout/header" as *;
+@use "./base/typography.scss" as *;
+@use "./abstract/mixins" as *;
+@use "./pages/home_page" as *;
+@use "./component/buttons" as *;

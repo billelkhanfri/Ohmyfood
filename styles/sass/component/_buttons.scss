@@ -1,0 +1,25 @@
+$primary_color: #9356dc;
+$secondary_color: #ff79da;
+$teritiary_color: #99e2d0;
+
+.homePage__button {
+  width: 55%;
+  margin: auto;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(
+    180deg,
+    $secondary_color,
+    rgba(174, 86, 220, 0.9)
+  );
+  border: none;
+  padding: 12px 12px;
+}
+.homePage__card--button {
+  div {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
