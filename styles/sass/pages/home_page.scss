@@ -1,0 +1,68 @@
+$bg_color: rgb(246, 246, 246);
+@mixin center_divs {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
+.location {
+  background-color: rgb(234, 234, 234);
+  box-shadow: 0px 4px 2px rgb(211, 211, 211) inset;
+}
+.location__block {
+  @include center_divs;
+  display: flex;
+  gap: 10%;
+
+  align-items: center;
+  height: 50px;
+
+  ::before {
+    font-size: 100%;
+    flex: 50%;
+  }
+  p {
+    flex: 50%;
+    font-size: 110%;
+    font-weight: 400;
+  }
+}
+.homePage__card--button {
+  background-color: $bg_color;
+  height: 270px;
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    padding-top: 40px;
+  }
+  p {
+    width: 90%;
+    margin: auto;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+.fonctionnement {
+  display: grid;
+  grid-template-rows: repeat(3fr);
+  gap: 15px;
+  width: 90%;
+  margin: 20px auto;
+  margin-bottom: 60px;
+}
+.restaurants {
+  display: grid;
+  grid-template-rows: repeat(4fr);
+  gap: 15px;
+  width: 100%;
+  margin: 20px auto;
+  margin-bottom: 60px;
+  background-color: $bg_color;
+  h1 {
+    margin: 50px 20px 5px 20px;
+  }
+}

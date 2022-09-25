@@ -5,14 +5,215 @@
 }
 
 body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+a :hover {
+  cursor: pointer;
+}
+
+.logo {
   width: 100%;
+  margin: 20px auto;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.logo img {
+  width: 50%;
+  margin: auto;
+}
+
+.logo .title {
+  font-family: "Shrikhand", cursive;
 }
 
 body {
+  font-family: "Roboto", sans-serif;
+}
+
+.location {
+  background-color: rgb(234, 234, 234);
+  box-shadow: 0px 4px 2px rgb(211, 211, 211) inset;
+}
+
+.location__block {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  gap: 10%;
+  align-items: center;
+  height: 50px;
+}
+.location__block ::before {
+  font-size: 100%;
+  flex: 50%;
+}
+.location__block p {
+  flex: 50%;
+  font-size: 110%;
+  font-weight: 400;
+}
+
+.homePage__card--button {
+  background-color: rgb(246, 246, 246);
+  height: 270px;
+}
+.homePage__card--button h1 {
+  font-size: 24px;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  padding-top: 40px;
+}
+.homePage__card--button p {
+  width: 90%;
+  margin: auto;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.fonctionnement {
+  display: grid;
+  grid-template-rows: repeat(3fr);
+  gap: 15px;
+  width: 90%;
+  margin: 20px auto;
+  margin-bottom: 60px;
+}
+
+.restaurants {
+  display: grid;
+  grid-template-rows: repeat(4fr);
+  gap: 15px;
+  width: 100%;
+  margin: 20px auto;
+  margin-bottom: 60px;
+  background-color: rgb(246, 246, 246);
+}
+.restaurants h1 {
+  margin: 50px 20px 5px 20px;
+}
+
+.homePage__button {
+  width: 55%;
+  margin: auto;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(180deg, #ff79da, rgba(174, 86, 220, 0.9));
+  border: none;
+  padding: 14px;
+  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+}
+
+.homePage__card--button div {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.fonctionnement__btn .btn {
+  display: grid;
+  grid-template-columns: 5% 10% 65%;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  padding: 22px 12px;
+  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+}
+.fonctionnement__btn .btn .fa-shar,
+.fonctionnement__btn .btn .fa-1,
+.fonctionnement__btn .btn .fa-2,
+.fonctionnement__btn .btn .fa-3 {
+  grid-column: 1;
+  margin-left: -25px;
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: white;
+  background-color: #9356dc;
+  border: #9356dc;
+  padding: 6px;
+}
+.fonctionnement__btn .btn .fa-mobile-screen,
+.fonctionnement__btn .btn .fa-bars,
+.fonctionnement__btn .btn .fa-store {
+  grid-column: 2;
+  font-size: 22px;
+  color: gray;
+}
+.fonctionnement__btn .btn span {
+  grid-column: 3;
+  font-size: 18px;
+}
+.fonctionnement__btn .btn:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.fonctionnement__btn .btn:hover .fa-mobile-screen,
+.fonctionnement__btn .btn:hover .fa-bars,
+.fonctionnement__btn .btn:hover .fa-store {
   color: #9356dc;
 }
-body header {
-  color: #99e2d0;
+
+.restaurant__card {
+  border-radius: 20px 20px;
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+}
+.restaurant__card .img__container {
+  position: relative;
+  text-align: center;
+  color: #198268;
+}
+.restaurant__card .img__container .nouveau {
+  position: absolute;
+  top: 10px;
+  right: 1rem;
+  background-color: #99e2d0;
+  padding: 4px 12px;
+}
+.restaurant__card .img__container .nouveau span {
+  font-size: 1rem;
+}
+.restaurant__card img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  z-index: 0;
+}
+.restaurant__card .nouveau {
+  z-index: 0;
+}
+.restaurant__card .restaurant__card--info {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  line-height: 10px;
+  margin-bottom: 10px;
+}
+.restaurant__card .fa-regular,
+.restaurant__card .fa-heart {
+  font-size: 1.5rem;
+}
+.restaurant__card h2 {
+  font-size: 1.2rem;
+}
+.restaurant__card p {
+  font-weight: 300;
 }
 body header .logo {
   color: #ff79da;

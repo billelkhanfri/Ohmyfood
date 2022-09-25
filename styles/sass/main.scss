@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use "./layout/global-rules" as *;
 @use "./helpers/variables" as *;
 body {
@@ -9,3 +10,13 @@ body {
     }
   }
 }
+=======
+@use "./base/global-rules" as *;
+@use "./abstract/variables" as *;
+@use "./layout/header" as *;
+@use "./base/typography.scss" as *;
+@use "./abstract/mixins" as *;
+@use "./pages/home_page" as *;
+@use "./component/buttons" as *;
+@use "./component/cards.scss" as *;
+>>>>>>> b866efa4d22f7f82edc89580954e13a5af71aa20

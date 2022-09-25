@@ -4,14 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- google fonts -->
+    <!-- google fonts  logo and title-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font texts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/css/main.css" />
-    <!-- Font library -->
     <!-- fontawsome using cdn -->
     <script
       src="https://kit.fontawesome.com/b8d0a59bea.js"
@@ -24,10 +31,138 @@
   <body>
     <main>
       <header>
-        <div>
-          <img src="images/logo/ohmyfood@2x.svg" alt="" />
+        <div class="logo">
+          <img src="images/logo/ohmyfood@2x.svg" alt="ohmyfood" />
         </div>
       </header>
+      <div class="location">
+        <div class="location__block">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Paris, Belleville</p>
+        </div>
+      </div>
+      <div class="homePage__card--button">
+        <h1>Réservez le menu qui vous convient</h1>
+        <p>Découvrez des restaurant d'exception, séléctionés par nos soins</p>
+        <div>
+          <a href="#">
+            <button class="homePage__button">Explorer nos restaurants</button>
+          </a>
+        </div>
+      </div>
+      <section>
+        <div class="fonctionnement">
+          <h1>Fonctionnemnt</h1>
+          <a href="#">
+            <div class="fonctionnement__btn">
+              <button class="btn">
+                <i class="fa-sharp fa-solid fa-1"></i>
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span>Choisissez un restaurant</span>
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            ><div class="fonctionnement__btn">
+              <button class="btn">
+                <i class="fa-solid fa-2"></i>
+                <i class="fa-solid fa-bars"></i>
+                <span>Composez votre menu</span>
+              </button>
+            </div></a
+          >
+          <a href="#">
+            <div class="fonctionnement__btn">
+              <button class="btn">
+                <i class="fa-solid fa-3"></i>
+                <i class="fa-solid fa-store"></i>
+                <span>Dégustez au restaurant</span>
+              </button>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section>
+        <div class="restaurants">
+          <h1>Restaurants</h1>
+          <div class="restaurant__card">
+            <div class="img__container">
+              <div class="nouveau">
+                <span>Nouveau</span>
+              </div>
+              <img
+                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="un plat dans un restaurant"
+              />
+            </div>
+            <div class="restaurant__card--info">
+              <div>
+                <h2>La pallete du goût</h2>
+                <p>Ménilmontant</p>
+              </div>
+
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class="restaurant__card">
+            <div class="img__container">
+              <div class="nouveau">
+                <span>Nouveau</span>
+              </div>
+              <img
+                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="un plat dans un restaurant"
+              />
+            </div>
+            <div class="restaurant__card--info">
+              <div>
+                <h2>La pallete du goût</h2>
+                <p>Ménilmontant</p>
+              </div>
+
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class="restaurant__card">
+            <div class="img__container">
+              <div class="nouveau">
+                <span>Nouveau</span>
+              </div>
+              <img
+                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="un plat dans un restaurant"
+              />
+            </div>
+            <div class="restaurant__card--info">
+              <div>
+                <h2>La pallete du goût</h2>
+                <p>Ménilmontant</p>
+              </div>
+
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class="restaurant__card">
+            <div class="img__container">
+              <div class="nouveau">
+                <span>Nouveau</span>
+              </div>
+              <img
+                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="un plat dans un restaurant"
+              />
+            </div>
+            <div class="restaurant__card--info">
+              <div>
+                <h2>La pallete du goût</h2>
+                <p>Ménilmontant</p>
+              </div>
+
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
