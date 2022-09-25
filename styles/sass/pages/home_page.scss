@@ -60,8 +60,9 @@ $bg_color: rgb(246, 246, 246);
   gap: 15px;
   width: 100%;
   margin: 20px auto;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
   background-color: $bg_color;
+  padding-bottom: 60px;
   h1 {
     margin: 50px 20px 5px 20px;
   }

@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-}
-
 a {
   text-decoration: none;
 }
@@ -26,7 +22,7 @@ a :hover {
   margin: auto;
 }
 
-.logo .title {
+.logo {
   font-family: "Shrikhand", cursive;
 }
 
@@ -93,8 +89,9 @@ body {
   gap: 15px;
   width: 100%;
   margin: 20px auto;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
   background-color: rgb(246, 246, 246);
+  padding-bottom: 60px;
 }
 .restaurants h1 {
   margin: 50px 20px 5px 20px;
@@ -190,10 +187,7 @@ body {
   object-fit: cover;
   width: 100%;
   border-radius: 20px 20px 0px 0px;
-  z-index: 0;
-}
-.restaurant__card .nouveau {
-  z-index: 0;
+  height: 200px;
 }
 .restaurant__card .restaurant__card--info {
   width: 90%;
@@ -214,6 +208,40 @@ body {
 }
 .restaurant__card p {
   font-weight: 300;
+}
+
+footer {
+  background-color: rgb(53, 53, 53);
+  padding-bottom: 30px;
+}
+footer h1 {
+  width: 90%;
+  margin: auto;
+  font-family: "Shrikhand", cursive;
+  font-weight: 200;
+  color: white;
+  margin-top: 0px;
+  font-size: 1.3rem;
+  padding: 20px 0px 0px 20px;
+}
+footer p {
+  color: white;
+  font-size: 1.2rem;
+}
+footer .contact__icones {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 10px;
+  height: 30px;
+  width: 90%;
+  margin: auto;
+}
+footer li {
+  list-style: none;
+}
+footer ul {
+  padding-left: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
