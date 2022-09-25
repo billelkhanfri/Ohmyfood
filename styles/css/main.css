@@ -14,5 +14,8 @@ body {
 body header {
   color: #99e2d0;
 }
+body header .logo {
+  color: #ff79da;
+}
 
 /*# sourceMappingURL=main.css.map */

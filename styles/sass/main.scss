@@ -4,5 +4,8 @@ body {
   color: $primary_color;
   header {
     color: $teritiary_color;
+    .logo {
+      color: $secondary_color;
+    }
   }
 }
