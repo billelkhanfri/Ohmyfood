@@ -3,3 +3,6 @@
   margin: auto;
   padding: 10px;
 }
+@mixin btn_shadow {
+  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+}

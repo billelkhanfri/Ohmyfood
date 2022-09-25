@@ -1,3 +1,10 @@
+$bg_color: rgb(246, 246, 246);
+@mixin center_divs {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
 .location {
   background-color: rgb(234, 234, 234);
   box-shadow: 0px 4px 2px rgb(211, 211, 211) inset;
@@ -37,5 +44,25 @@
     font-size: 18px;
     text-align: center;
     margin-top: 10px;
+  }
+}
+.fonctionnement {
+  display: grid;
+  grid-template-rows: repeat(3fr);
+  gap: 15px;
+  width: 90%;
+  margin: 20px auto;
+  margin-bottom: 60px;
+}
+.restaurants {
+  display: grid;
+  grid-template-rows: repeat(4fr);
+  gap: 15px;
+  width: 100%;
+  margin: 20px auto;
+  margin-bottom: 60px;
+  background-color: $bg_color;
+  h1 {
+    margin: 50px 20px 5px 20px;
   }
 }
