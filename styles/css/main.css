@@ -209,6 +209,9 @@ body {
 .restaurant__card p {
   font-weight: 300;
 }
+body header .logo {
+  color: #ff79da;
+}
 
 footer {
   background-color: rgb(53, 53, 53);
