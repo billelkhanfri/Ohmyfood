@@ -7,8 +7,12 @@
 a {
   text-decoration: none;
 }
-a :hover {
+a:hover {
   cursor: pointer;
+}
+
+body {
+  margin: 0;
 }
 
 .logo {
@@ -18,7 +22,7 @@ a :hover {
   text-align: center;
 }
 .logo img {
-  width: 50%;
+  width: 200px;
   margin: auto;
 }
 
@@ -38,7 +42,7 @@ footer h1 {
 }
 footer p {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 footer .contact__icones {
   display: flex;
@@ -49,11 +53,13 @@ footer .contact__icones {
   width: 90%;
   margin: auto;
 }
+footer ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding-left: 20px;
+}
 footer li {
   list-style: none;
-}
-footer ul {
-  padding-left: 20px;
 }
 
 .logo {
@@ -72,22 +78,19 @@ body {
 }
 
 .location__block {
-  width: 50%;
-  margin: auto;
-  padding: 10px;
   display: flex;
+  width: 200px;
+  margin: auto;
   gap: 10%;
-  position: relative;
+  justify-content: flex-start;
   align-items: center;
   height: 50px;
 }
 .location__block ::before {
-  font-size: 100%;
-  flex: 50%;
+  font-size: 1.2rem;
 }
 .location__block p {
-  flex: 50%;
-  font-size: 120%;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -111,9 +114,14 @@ body {
   margin-top: 10px;
 }
 
+section > h1 {
+  width: 90%;
+  margin: 20px auto;
+}
+
 .fonctionnement {
   display: grid;
-  grid-template-rows: repeat(3fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
   width: 90%;
   margin: 20px auto;
@@ -122,7 +130,7 @@ body {
 
 .restaurants {
   display: grid;
-  grid-template-rows: repeat(4fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
   width: 100%;
   margin: 20px auto;
@@ -135,18 +143,20 @@ body {
 }
 
 .homePage__button {
-  width: 55%;
+  width: 100%;
   margin: auto;
   border-radius: 50px;
   color: white;
   background: linear-gradient(180deg, #ff79da, rgba(174, 86, 220, 0.9));
   border: none;
-  padding: 14px;
+  height: 50px;
   box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+  font-size: 1rem;
+  padding: 8px;
 }
 
 .homePage__card--button div {
-  width: 400px;
+  width: 60%;
   margin: auto;
   text-align: center;
   margin-top: 30px;
@@ -215,7 +225,7 @@ body {
   top: 10px;
   right: 1rem;
   background-color: #99e2d0;
-  padding: 6px 14px;
+  padding: 4px 10px;
 }
 .restaurant__card .img__container .nouveau span {
   font-size: 1rem;
@@ -223,7 +233,7 @@ body {
 .restaurant__card img {
   object-fit: cover;
   width: 100%;
-  max-height: 220px;
+  height: 150px;
   border-radius: 20px 20px 0px 0px;
 }
 .restaurant__card .restaurant__card--info {
@@ -236,15 +246,35 @@ body {
   line-height: 10px;
   margin-bottom: 10px;
 }
-.restaurant__card .fa-regular,
-.restaurant__card .fa-heart {
-  font-size: 1.5rem;
+.restaurant__card button {
+  background-color: white;
+  border: none;
+}
+.restaurant__card button .fa-solid {
+  font-size: 1rem;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(90deg, #ff79da, rgba(174, 86, 220, 0.9));
+  display: none;
+}
+.restaurant__card button .fa-regular {
+  font-size: 1rem;
+}
+.restaurant__card button:hover .fa-regular {
+  display: none;
+}
+.restaurant__card button:hover .fa-solid {
+  cursor: pointer;
+  display: block;
 }
 .restaurant__card h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  line-height: 15px;
 }
 .restaurant__card p {
   font-weight: 300;
+  font-size: 0.9rem;
 }
 
 /*# sourceMappingURL=main.css.map */
