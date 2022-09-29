@@ -1,9 +1,20 @@
+@use "./abstract/mixins" as *;
 @use "./base/global-rules" as *;
 @use "./abstract/variables" as *;
+@use "./component/buttons" as *;
+@use "./component/cards.scss" as *;
 @use "./layout/header" as *;
 @use "./layout/footer" as *;
 @use "./base/typography.scss" as *;
-@use "./abstract/mixins" as *;
 @use "./pages/home_page" as *;
-@use "./component/buttons" as *;
-@use "./component/cards.scss" as *;
+@use "./pages/menu.scss" as *;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}

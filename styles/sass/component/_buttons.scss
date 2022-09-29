@@ -2,12 +2,19 @@ $primary_color: #9356dc;
 $secondary_color: #ff79da;
 $teritiary_color: #99e2d0;
 $bg_color: rgb(246, 246, 246);
+$secondary_color: #ff79da;
 @mixin btn_shadow {
   box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
 }
+@mixin link {
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 .homePage__button {
-  width: 100%;
+  width: 220px;
   margin: auto;
   border-radius: 50px;
   color: white;
@@ -20,18 +27,19 @@ $bg_color: rgb(246, 246, 246);
   height: 50px;
   @include btn_shadow;
   font-size: 1rem;
-  padding: 8px;
 }
 .homePage__card--button {
   div {
-    width: 60%;
-    margin: auto;
     text-align: center;
     margin-top: 30px;
+    button {
+      @include link;
+    }
   }
 }
 .fonctionnement__btn {
   .btn {
+    @include link;
     display: grid;
     grid-template-columns: 5% 10% 65%;
     align-items: center;

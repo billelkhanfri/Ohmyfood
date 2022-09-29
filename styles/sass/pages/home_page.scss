@@ -4,6 +4,13 @@ $bg_color: rgb(246, 246, 246);
   margin: auto;
   padding: 10px;
 }
+@mixin link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 .location {
   background-color: rgb(234, 234, 234);
@@ -60,7 +67,11 @@ section {
   width: 90%;
   margin: 20px auto;
   margin-bottom: 60px;
+  a {
+    @include link;
+  }
 }
+
 .restaurants {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -72,5 +83,8 @@ section {
   padding-bottom: 60px;
   h1 {
     margin: 50px 20px 5px 20px;
+  }
+  a {
+    @include link;
   }
 }

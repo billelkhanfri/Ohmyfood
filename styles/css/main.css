@@ -1,18 +1,142 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.homePage__button {
+  width: 220px;
+  margin: auto;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(180deg, #ff79da, rgba(174, 86, 220, 0.9));
+  border: none;
+  height: 50px;
+  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+  font-size: 1rem;
 }
 
-a {
+.homePage__card--button div {
+  text-align: center;
+  margin-top: 30px;
+}
+.homePage__card--button div button {
   text-decoration: none;
 }
-a:hover {
+.homePage__card--button div button:hover {
   cursor: pointer;
 }
 
-body {
-  margin: 0;
+.fonctionnement__btn .btn {
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 5% 10% 65%;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  padding: 22px 12px;
+  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+}
+.fonctionnement__btn .btn:hover {
+  cursor: pointer;
+}
+.fonctionnement__btn .btn .fa-shar,
+.fonctionnement__btn .btn .fa-1,
+.fonctionnement__btn .btn .fa-2,
+.fonctionnement__btn .btn .fa-3 {
+  grid-column: 1;
+  margin-left: -25px;
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: white;
+  background-color: #9356dc;
+  border: #9356dc;
+  padding: 6px;
+}
+.fonctionnement__btn .btn .fa-mobile-screen,
+.fonctionnement__btn .btn .fa-bars,
+.fonctionnement__btn .btn .fa-store {
+  grid-column: 2;
+  font-size: 22px;
+  color: gray;
+}
+.fonctionnement__btn .btn span {
+  grid-column: 3;
+  font-size: 18px;
+}
+.fonctionnement__btn .btn:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.fonctionnement__btn .btn:hover .fa-mobile-screen,
+.fonctionnement__btn .btn:hover .fa-bars,
+.fonctionnement__btn .btn:hover .fa-store {
+  color: #9356dc;
+}
+
+.restaurant__card {
+  border-radius: 20px 20px;
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+}
+.restaurant__card .img__container {
+  position: relative;
+  text-align: center;
+  color: #198268;
+}
+.restaurant__card .img__container .nouveau {
+  position: absolute;
+  top: 10px;
+  right: 1rem;
+  background-color: #99e2d0;
+  padding: 4px 10px;
+}
+.restaurant__card .img__container .nouveau span {
+  font-size: 1rem;
+}
+.restaurant__card img {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+  border-radius: 20px 20px 0px 0px;
+}
+.restaurant__card .restaurant__card--info {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 10px;
+  margin-bottom: 10px;
+}
+.restaurant__card button {
+  background-color: white;
+  border: none;
+}
+.restaurant__card button .fa-solid {
+  font-size: 1.5rem;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(90deg, #ff79da, rgba(174, 86, 220, 0.9));
+  display: none;
+}
+.restaurant__card button .fa-regular {
+  font-size: 1.5rem;
+}
+.restaurant__card button:hover .fa-regular {
+  display: none;
+}
+.restaurant__card button:hover .fa-solid {
+  cursor: pointer;
+  display: block;
+}
+.restaurant__card h2 {
+  font-size: 100%;
+  line-height: 15px;
+}
+.restaurant__card p {
+  font-weight: 300;
+  font-size: 0.9rem;
 }
 
 .logo {
@@ -22,8 +146,23 @@ body {
   text-align: center;
 }
 .logo img {
-  width: 200px;
+  width: 180px;
   margin: auto;
+  z-index: 0;
+}
+.logo .fa-arrow-left {
+  position: absolute;
+  top: 20px;
+  left: 14px;
+  font-size: 1.5rem;
+  padding: 4px 10px;
+}
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+.logo a:hover {
+  cursor: pointer;
 }
 
 footer {
@@ -50,8 +189,7 @@ footer .contact__icones {
   color: white;
   gap: 10px;
   height: 30px;
-  width: 90%;
-  margin: auto;
+  width: 100%;
 }
 footer ul {
   display: grid;
@@ -127,6 +265,13 @@ section > h1 {
   margin: 20px auto;
   margin-bottom: 60px;
 }
+.fonctionnement a {
+  text-decoration: none;
+  color: black;
+}
+.fonctionnement a:hover {
+  cursor: pointer;
+}
 
 .restaurants {
   display: grid;
@@ -141,140 +286,74 @@ section > h1 {
 .restaurants h1 {
   margin: 50px 20px 5px 20px;
 }
+.restaurants a {
+  text-decoration: none;
+  color: black;
+}
+.restaurants a:hover {
+  cursor: pointer;
+}
 
-.homePage__button {
+.img__container {
+  background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
   width: 100%;
-  margin: auto;
-  border-radius: 50px;
-  color: white;
-  background: linear-gradient(180deg, #ff79da, rgba(174, 86, 220, 0.9));
-  border: none;
-  height: 50px;
-  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
-  font-size: 1rem;
-  padding: 8px;
+  height: 300px;
+  background-position: 50%;
 }
 
-.homePage__card--button div {
-  width: 60%;
-  margin: auto;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.fonctionnement__btn .btn {
-  display: grid;
-  grid-template-columns: 5% 10% 65%;
-  align-items: center;
-  gap: 5px;
+main {
   width: 100%;
-  border-radius: 20px;
-  border: none;
-  padding: 22px 12px;
-  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
-}
-.fonctionnement__btn .btn .fa-shar,
-.fonctionnement__btn .btn .fa-1,
-.fonctionnement__btn .btn .fa-2,
-.fonctionnement__btn .btn .fa-3 {
-  grid-column: 1;
-  margin-left: -25px;
-  font-size: 12px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  color: white;
-  background-color: #9356dc;
-  border: #9356dc;
-  padding: 6px;
-}
-.fonctionnement__btn .btn .fa-mobile-screen,
-.fonctionnement__btn .btn .fa-bars,
-.fonctionnement__btn .btn .fa-store {
-  grid-column: 2;
-  font-size: 22px;
-  color: gray;
-}
-.fonctionnement__btn .btn span {
-  grid-column: 3;
-  font-size: 18px;
-}
-.fonctionnement__btn .btn:hover {
-  background-color: rgba(147, 86, 220, 0.1);
-}
-.fonctionnement__btn .btn:hover .fa-mobile-screen,
-.fonctionnement__btn .btn:hover .fa-bars,
-.fonctionnement__btn .btn:hover .fa-store {
-  color: #9356dc;
-}
-
-.restaurant__card {
-  border-radius: 20px 20px;
-  width: 90%;
-  margin: auto;
+  border-radius: 40px 40px 0px 0px;
   background-color: white;
-  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+  margin-top: -100px;
 }
-.restaurant__card .img__container {
-  position: relative;
-  text-align: center;
-  color: #198268;
-}
-.restaurant__card .img__container .nouveau {
-  position: absolute;
-  top: 10px;
-  right: 1rem;
-  background-color: #99e2d0;
-  padding: 4px 10px;
-}
-.restaurant__card .img__container .nouveau span {
-  font-size: 1rem;
-}
-.restaurant__card img {
-  object-fit: cover;
-  width: 100%;
-  height: 150px;
-  border-radius: 20px 20px 0px 0px;
-}
-.restaurant__card .restaurant__card--info {
-  width: 90%;
-  margin: auto;
+main .restaurant__card--info {
+  width: 85%;
+  margin: 40px 40px 20px 20px;
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
   line-height: 10px;
   margin-bottom: 10px;
 }
-.restaurant__card button {
-  background-color: white;
+main button {
+  background-color: transparent;
   border: none;
 }
-.restaurant__card button .fa-solid {
-  font-size: 1rem;
+main button .fa-solid {
+  font-size: 1.5rem;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(90deg, #ff79da, rgba(174, 86, 220, 0.9));
   display: none;
 }
-.restaurant__card button .fa-regular {
-  font-size: 1rem;
+main button .fa-regular {
+  font-size: 1.5rem;
 }
-.restaurant__card button:hover .fa-regular {
+main button:hover .fa-regular {
   display: none;
 }
-.restaurant__card button:hover .fa-solid {
+main button:hover .fa-solid {
   cursor: pointer;
   display: block;
 }
-.restaurant__card h2 {
-  font-size: 1rem;
+main h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 158%;
   line-height: 15px;
 }
-.restaurant__card p {
-  font-weight: 300;
-  font-size: 0.9rem;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
