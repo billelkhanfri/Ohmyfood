@@ -199,6 +199,9 @@ footer ul {
 footer li {
   list-style: none;
 }
+footer li a {
+  text-decoration: none;
+}
 
 .logo {
   font-family: "Shrikhand", cursive;
@@ -294,7 +297,7 @@ section > h1 {
   cursor: pointer;
 }
 
-.img__container {
+.img__container--menu {
   background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
   width: 100%;
@@ -302,13 +305,13 @@ section > h1 {
   background-position: 50%;
 }
 
-main {
+.main__menu {
   width: 100%;
   border-radius: 40px 40px 0px 0px;
   background-color: white;
   margin-top: -100px;
 }
-main .restaurant__card--info {
+.main__menu .restaurant__card--info {
   width: 85%;
   margin: 40px 40px 20px 20px;
   padding-top: 30px;
@@ -318,11 +321,11 @@ main .restaurant__card--info {
   line-height: 10px;
   margin-bottom: 10px;
 }
-main button {
+.main__menu button {
   background-color: transparent;
   border: none;
 }
-main button .fa-solid {
+.main__menu button .fa-solid {
   font-size: 1.5rem;
   color: transparent;
   background-clip: text;
@@ -330,20 +333,65 @@ main button .fa-solid {
   background-image: linear-gradient(90deg, #ff79da, rgba(174, 86, 220, 0.9));
   display: none;
 }
-main button .fa-regular {
+.main__menu button .fa-regular {
   font-size: 1.5rem;
 }
-main button:hover .fa-regular {
+.main__menu button:hover .fa-regular {
   display: none;
 }
-main button:hover .fa-solid {
+.main__menu button:hover .fa-solid {
   cursor: pointer;
   display: block;
 }
-main h2 {
+.main__menu h2 {
   font-family: "Shrikhand", cursive;
   font-size: 158%;
   line-height: 15px;
+}
+
+.title__menu--composition {
+  display: block;
+  margin-left: 20px;
+}
+.title__menu--composition h3 {
+  font-weight: 200;
+}
+.title__menu--composition .entrees__border {
+  width: 9%;
+  background-color: #99e2d0;
+  height: 3px;
+}
+
+.menu__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  width: 90%;
+  margin: 20px auto;
+  margin-bottom: 60px;
+}
+
+.menu__card--composition {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  align-self: center;
+  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+  border: solid;
+}
+.menu__card--composition div {
+  display: block;
+  border: solid;
+}
+.menu__card--composition h2 {
+  font-size: 100%;
+  line-height: 0px;
+}
+.menu__card--composition p {
+  font-weight: 300;
+  font-size: 0.9rem;
 }
 
 * {

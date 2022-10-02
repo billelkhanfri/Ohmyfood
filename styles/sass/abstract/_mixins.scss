@@ -13,3 +13,30 @@
     cursor: pointer;
   }
 }
+@mixin like__heart {
+  background-color: transparent;
+  border: none;
+  .fa-solid {
+    font-size: 1.5rem;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+      90deg,
+      $secondary_color,
+      rgba(174, 86, 220, 0.9)
+    );
+    display: none;
+  }
+  .fa-regular {
+    font-size: 1.5rem;
+  }
+
+  &:hover .fa-regular {
+    display: none;
+  }
+  &:hover .fa-solid {
+    cursor: pointer;
+    display: block;
+  }
+}
