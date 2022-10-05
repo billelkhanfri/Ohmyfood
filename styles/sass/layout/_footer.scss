@@ -1,4 +1,7 @@
 $footer__bg--color: rgb(53, 53, 53);
+$logo-title: "Shrikhand", cursive;
+$text: "Roboto", sans-serif;
+
 footer {
   background-color: $footer__bg--color;
   padding-bottom: 30px;
@@ -6,7 +9,7 @@ footer {
   h1 {
     width: 90%;
     margin: auto;
-    font-family: "Shrikhand", cursive;
+    font-family: $logo-title;
     font-weight: 200;
     color: white;
     margin-top: 0px;

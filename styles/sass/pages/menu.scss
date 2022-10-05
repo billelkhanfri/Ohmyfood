@@ -1,17 +1,22 @@
 $primary_color: #9356dc;
 $secondary_color: #ff79da;
 $teritiary_color: #99e2d0;
+$logo-title: "Shrikhand", cursive;
+$text: "Roboto", sans-serif;
 $bg_color: rgb(246, 246, 246);
 @mixin btn_shadow {
   box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
 }
 @mixin link {
   text-decoration: none;
+  color: black;
   &:hover {
     cursor: pointer;
   }
 }
-
+body {
+  background-color: $bg_color;
+}
 .img__container--menu {
   background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
@@ -24,7 +29,7 @@ $bg_color: rgb(246, 246, 246);
 .main__menu {
   width: 100%;
   border-radius: 40px 40px 0px 0px;
-  background-color: white;
+  background-color: $bg_color;
   margin-top: -100px;
   .restaurant__card--info {
     width: 85%;
@@ -35,6 +40,9 @@ $bg_color: rgb(246, 246, 246);
     align-items: center;
     line-height: 10px;
     margin-bottom: 10px;
+    h2 {
+      font-family: $logo-title;
+    }
   }
 
   button {
@@ -64,11 +72,6 @@ $bg_color: rgb(246, 246, 246);
       display: block;
     }
   }
-  h2 {
-    font-family: "Shrikhand", cursive;
-    font-size: 158%;
-    line-height: 15px;
-  }
 }
 .title__menu--composition {
   display: block;
@@ -79,7 +82,7 @@ $bg_color: rgb(246, 246, 246);
     font-weight: 200;
   }
   .entrees__border {
-    width: 9%;
+    width: 5%;
     background-color: #99e2d0;
     height: 3px;
   }
@@ -91,28 +94,73 @@ $bg_color: rgb(246, 246, 246);
   width: 90%;
   margin: 20px auto;
   margin-bottom: 60px;
+  a {
+    @include link;
+  }
 }
+
 .menu__card--composition {
-  display: flex;
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
   justify-content: space-between;
+  align-content: center;
   width: 100%;
-  border-radius: 20px;
-  border: none;
-  align-self: center;
+  border-radius: 10px;
   @include btn_shadow;
-  border: solid;
-  div {
+  background-color: white;
+
+  > div {
+    grid-column: 1;
     display: block;
 
-    border: solid;
+    h3 {
+      font-size: 90%;
+      margin: 10px 0px 3px 10px;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 0.7rem;
+      margin: 0px 0px 10px 10px;
+    }
   }
-  h2 {
-    font-size: 100%;
-    line-height: 0px;
-  
+  .price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    height: 100%;
+    display: none;
   }
-  p {
-    font-weight: 300;
-    font-size: 0.9rem;
+
+  .price__switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+    border-radius: 0px 10px 10px 0px;
+    height: 100%;
+
+    .fa-circle-check {
+      display: none;
+    }
+  }
+  &:hover .price {
+    display: flex;
+  }
+  &:hover .fa-circle-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+
+    height: 100%;
+  }
+  &:hover .price__switch span {
+    display: none;
+  }
+  &:hover .price__switch {
+    background-color: $teritiary_color;
   }
 }

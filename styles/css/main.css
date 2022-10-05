@@ -108,11 +108,11 @@
   line-height: 10px;
   margin-bottom: 10px;
 }
-.restaurant__card button {
+.restaurant__card .heart__button {
   background-color: white;
   border: none;
 }
-.restaurant__card button .fa-solid {
+.restaurant__card .heart__button .fa-solid {
   font-size: 1.5rem;
   color: transparent;
   background-clip: text;
@@ -120,13 +120,13 @@
   background-image: linear-gradient(90deg, #ff79da, rgba(174, 86, 220, 0.9));
   display: none;
 }
-.restaurant__card button .fa-regular {
+.restaurant__card .heart__button .fa-regular {
   font-size: 1.5rem;
 }
-.restaurant__card button:hover .fa-regular {
+.restaurant__card .heart__button:hover .fa-regular {
   display: none;
 }
-.restaurant__card button:hover .fa-solid {
+.restaurant__card .heart__button:hover .fa-solid {
   cursor: pointer;
   display: block;
 }
@@ -278,7 +278,7 @@ section > h1 {
 
 .restaurants {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 15px;
   width: 100%;
   margin: 20px auto;
@@ -297,6 +297,10 @@ section > h1 {
   cursor: pointer;
 }
 
+body {
+  background-color: rgb(246, 246, 246);
+}
+
 .img__container--menu {
   background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
@@ -308,7 +312,7 @@ section > h1 {
 .main__menu {
   width: 100%;
   border-radius: 40px 40px 0px 0px;
-  background-color: white;
+  background-color: rgb(246, 246, 246);
   margin-top: -100px;
 }
 .main__menu .restaurant__card--info {
@@ -320,6 +324,9 @@ section > h1 {
   align-items: center;
   line-height: 10px;
   margin-bottom: 10px;
+}
+.main__menu .restaurant__card--info h2 {
+  font-family: "Shrikhand", cursive;
 }
 .main__menu button {
   background-color: transparent;
@@ -343,11 +350,6 @@ section > h1 {
   cursor: pointer;
   display: block;
 }
-.main__menu h2 {
-  font-family: "Shrikhand", cursive;
-  font-size: 158%;
-  line-height: 15px;
-}
 
 .title__menu--composition {
   display: block;
@@ -357,7 +359,7 @@ section > h1 {
   font-weight: 200;
 }
 .title__menu--composition .entrees__border {
-  width: 9%;
+  width: 5%;
   background-color: #99e2d0;
   height: 3px;
 }
@@ -370,28 +372,72 @@ section > h1 {
   margin: 20px auto;
   margin-bottom: 60px;
 }
+.menu__cards a {
+  text-decoration: none;
+  color: black;
+}
+.menu__cards a:hover {
+  cursor: pointer;
+}
 
 .menu__card--composition {
-  display: flex;
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
   justify-content: space-between;
+  align-content: center;
   width: 100%;
-  border-radius: 20px;
-  border: none;
-  align-self: center;
+  border-radius: 10px;
   box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
-  border: solid;
+  background-color: white;
 }
-.menu__card--composition div {
+.menu__card--composition > div {
+  grid-column: 1;
   display: block;
-  border: solid;
 }
-.menu__card--composition h2 {
-  font-size: 100%;
-  line-height: 0px;
+.menu__card--composition > div h3 {
+  font-size: 90%;
+  margin: 10px 0px 3px 10px;
 }
-.menu__card--composition p {
+.menu__card--composition > div p {
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
+  margin: 0px 0px 10px 10px;
+}
+.menu__card--composition .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2;
+  height: 100%;
+  display: none;
+}
+.menu__card--composition .price__switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3;
+  border-radius: 0px 10px 10px 0px;
+  height: 100%;
+}
+.menu__card--composition .price__switch .fa-circle-check {
+  display: none;
+}
+.menu__card--composition:hover .price {
+  display: flex;
+}
+.menu__card--composition:hover .fa-circle-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  height: 100%;
+}
+.menu__card--composition:hover .price__switch span {
+  display: none;
+}
+.menu__card--composition:hover .price__switch {
+  background-color: #99e2d0;
 }
 
 * {
