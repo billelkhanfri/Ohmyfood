@@ -40,3 +40,15 @@
     display: block;
   }
 }
+@mixin menu-img {
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  // zoom: 1.2;
+  background-position: 50%;
+}
+@mixin text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

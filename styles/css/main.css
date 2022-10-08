@@ -301,8 +301,32 @@ body {
   background-color: rgb(246, 246, 246);
 }
 
-.img__container--menu {
+.img__container--menu1 {
   background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-position: 50%;
+}
+
+.img__container--menu2 {
+  background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-position: 50%;
+}
+
+.img__container--menu3 {
+  background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-position: 50%;
+}
+
+.img__container--menu4 {
+  background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -359,7 +383,7 @@ body {
   font-weight: 200;
 }
 .title__menu--composition .entrees__border {
-  width: 5%;
+  width: 12%;
   background-color: #99e2d0;
   height: 3px;
 }
@@ -382,7 +406,7 @@ body {
 
 .menu__card--composition {
   display: grid;
-  grid-template-columns: 60% 20% 20%;
+  grid-template-columns: 60% 20% 15%;
   justify-content: space-between;
   align-content: center;
   width: 100%;
@@ -395,13 +419,17 @@ body {
   display: block;
 }
 .menu__card--composition > div h3 {
-  font-size: 90%;
+  font-size: 0.85rem;
   margin: 10px 0px 3px 10px;
+  white-space: nowrap;
 }
 .menu__card--composition > div p {
   font-weight: 300;
   font-size: 0.7rem;
   margin: 0px 0px 10px 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__card--composition .price {
   display: flex;
@@ -410,6 +438,10 @@ body {
   grid-column: 2;
   height: 100%;
   display: none;
+}
+.menu__card--composition span {
+  margin-top: 10px;
+  margin-right: 10px;
 }
 .menu__card--composition .price__switch {
   display: flex;
