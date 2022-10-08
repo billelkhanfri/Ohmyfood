@@ -55,7 +55,7 @@ $bg_color: rgb(246, 246, 246);
   }
 }
 section {
-  > h1 {
+  > h2 {
     width: 90%;
     margin: 20px auto;
   }
@@ -81,7 +81,7 @@ section {
   margin-bottom: 0px;
   background-color: $bg_color;
   padding-bottom: 60px;
-  h1 {
+  h2 {
     margin: 50px 20px 5px 20px;
   }
   a {

@@ -255,7 +255,7 @@ body {
   margin-top: 10px;
 }
 
-section > h1 {
+section > h2 {
   width: 90%;
   margin: 20px auto;
 }
@@ -286,7 +286,7 @@ section > h1 {
   background-color: rgb(246, 246, 246);
   padding-bottom: 60px;
 }
-.restaurants h1 {
+.restaurants h2 {
   margin: 50px 20px 5px 20px;
 }
 .restaurants a {
