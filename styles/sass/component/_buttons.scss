@@ -3,11 +3,21 @@ $secondary_color: #ff79da;
 $teritiary_color: #99e2d0;
 $bg_color: rgb(246, 246, 246);
 $secondary_color: #ff79da;
+$gradient: linear-gradient(90deg,
+    $secondary_color,
+    rgba(174, 86, 220, 0.9));
+
 @mixin btn_shadow {
-  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+  box-shadow: 0px 6px 6px rgba(220, 215, 215, 0.9);
 }
+
+@mixin btn__shadow--hover {
+  box-shadow: 0px 8px 8px rgba(149, 143, 143, 0.9);
+}
+
 @mixin link {
   text-decoration: none;
+
   &:hover {
     cursor: pointer;
   }
@@ -18,30 +28,36 @@ $secondary_color: #ff79da;
   margin: auto;
   border-radius: 50px;
   color: white;
-  background: linear-gradient(
-    180deg,
-    $secondary_color,
-    rgba(174, 86, 220, 0.9)
-  );
+  background: linear-gradient(180deg,
+      $secondary_color,
+      rgba(174, 86, 220, 0.9));
   border: none;
   height: 50px;
   @include btn_shadow;
   font-size: 1rem;
+
+  &:hover {
+    opacity: 82%;
+    @include btn__shadow--hover;
+  }
 }
+
 .homePage__card--button {
   div {
     text-align: center;
     margin-top: 30px;
+
     button {
       @include link;
     }
   }
 }
+
 .fonctionnement__btn {
   .btn {
     @include link;
     display: grid;
-    grid-template-columns: 5% 10% 65%;
+    grid-template-columns: 0% 10% 70%;
     align-items: center;
     gap: 5px;
     width: 100%;
@@ -49,6 +65,7 @@ $secondary_color: #ff79da;
     border: none;
     padding: 22px 12px;
     @include btn_shadow;
+
     .fa-shar,
     .fa-1,
     .fa-2,
@@ -75,11 +92,15 @@ $secondary_color: #ff79da;
 
     span {
       grid-column: 3;
-      font-size: 18px;
+      font-size: 1rem;
+      color: black;
+      white-space: nowrap;
     }
   }
+
   .btn:hover {
     background-color: rgb(147, 86, 220, 0.1);
+
     .fa-mobile-screen,
     .fa-bars,
     .fa-store {

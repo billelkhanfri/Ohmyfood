@@ -1,3 +1,46 @@
+.loader {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  opacity: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hide__loader 0.75s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.8s;
+}
+.loader::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 6px solid lightsalmon;
+  border-radius: 50%;
+  border-color: #9356dc #ff79da #99e2d0 transparent;
+  animation: loading 0.5s linear infinite;
+  -webkit-animation: loading 0.5s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes hide__loader {
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .homePage__button {
   width: 220px;
   margin: auto;
@@ -6,8 +49,12 @@
   background: linear-gradient(180deg, #ff79da, rgba(174, 86, 220, 0.9));
   border: none;
   height: 50px;
-  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+  box-shadow: 0px 6px 6px rgba(220, 215, 215, 0.9);
   font-size: 1rem;
+}
+.homePage__button:hover {
+  opacity: 82%;
+  box-shadow: 0px 8px 8px rgba(149, 143, 143, 0.9);
 }
 
 .homePage__card--button div {
@@ -24,14 +71,14 @@
 .fonctionnement__btn .btn {
   text-decoration: none;
   display: grid;
-  grid-template-columns: 5% 10% 65%;
+  grid-template-columns: 0% 10% 70%;
   align-items: center;
   gap: 5px;
   width: 100%;
   border-radius: 20px;
   border: none;
   padding: 22px 12px;
-  box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
+  box-shadow: 0px 6px 6px rgba(220, 215, 215, 0.9);
 }
 .fonctionnement__btn .btn:hover {
   cursor: pointer;
@@ -60,7 +107,9 @@
 }
 .fonctionnement__btn .btn span {
   grid-column: 3;
-  font-size: 18px;
+  font-size: 1rem;
+  color: black;
+  white-space: nowrap;
 }
 .fonctionnement__btn .btn:hover {
   background-color: rgba(147, 86, 220, 0.1);
@@ -222,17 +271,31 @@ body {
   display: flex;
   width: 200px;
   margin: auto;
-  gap: 10%;
+  gap: 8%;
   justify-content: flex-start;
   align-items: center;
   height: 50px;
 }
-.location__block ::before {
-  font-size: 1.2rem;
+.location__block > input {
+  background-color: rgb(234, 234, 234);
+  border: none;
 }
-.location__block p {
-  font-size: 1.2rem;
-  font-weight: 400;
+.location__block > input::placeholder {
+  color: black;
+  font-size: 1.1rem;
+}
+.location__block > input:focus {
+  outline: none;
+}
+.location__block > input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in-out;
+  -moz-transition: opacity 200ms ease-in-out;
+  -moz-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+.location__block > label {
+  margin-left: 10px;
 }
 
 .homePage__card--button {
@@ -307,6 +370,9 @@ body {
   width: 100%;
   height: 300px;
   background-position: 50%;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .img__container--menu2 {
@@ -315,6 +381,9 @@ body {
   width: 100%;
   height: 300px;
   background-position: 50%;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .img__container--menu3 {
@@ -323,6 +392,9 @@ body {
   width: 100%;
   height: 300px;
   background-position: 50%;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .img__container--menu4 {
@@ -331,6 +403,9 @@ body {
   width: 100%;
   height: 300px;
   background-position: 50%;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .main__menu {
@@ -377,22 +452,27 @@ body {
 
 .title__menu--composition {
   display: block;
+  position: relative;
   margin-left: 20px;
+  width: fit-content;
 }
 .title__menu--composition h3 {
   font-weight: 200;
 }
-.title__menu--composition .entrees__border {
-  width: 12%;
+.title__menu--composition::after {
+  content: "";
+  position: absolute;
+  width: 60%;
   background-color: #99e2d0;
-  height: 3px;
+  height: 10%;
+  bottom: -30%;
 }
 
 .menu__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
-  width: 90%;
+  width: 94%;
   margin: 20px auto;
   margin-bottom: 60px;
 }
@@ -474,6 +554,10 @@ body {
 
 .menu__card--button {
   height: 100px;
+}
+
+.menu__button:hover {
+  background-color: #99e2d0;
 }
 
 * {

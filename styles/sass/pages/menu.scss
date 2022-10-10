@@ -4,52 +4,67 @@ $teritiary_color: #99e2d0;
 $logo-title: "Shrikhand", cursive;
 $text: "Roboto", sans-serif;
 $bg_color: rgb(246, 246, 246);
+
 @mixin btn_shadow {
   box-shadow: 0px 5px 5px rgba(220, 215, 215, 0.9);
 }
+
 @mixin link {
   text-decoration: none;
   color: black;
+
   &:hover {
     cursor: pointer;
   }
 }
+
 @mixin menu-img {
   background-size: cover;
   width: 100%;
   height: 300px;
   // zoom: 1.2;
   background-position: 50%;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
+
 @mixin text-overflow {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
 body {
   background-color: $bg_color;
 }
+
 .img__container--menu1 {
   background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   @include menu-img;
 }
+
 .img__container--menu2 {
   background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   @include menu-img;
 }
+
 .img__container--menu3 {
   background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   @include menu-img;
 }
+
 .img__container--menu4 {
   background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   @include menu-img;
 }
+
 .main__menu {
   width: 100%;
   border-radius: 40px 40px 0px 0px;
   background-color: $bg_color;
   margin-top: -100px;
+
   .restaurant__card--info {
     width: 85%;
     margin: 40px 40px 20px 20px;
@@ -59,6 +74,7 @@ body {
     align-items: center;
     line-height: 10px;
     margin-bottom: 10px;
+
     h2 {
       font-family: $logo-title;
     }
@@ -67,18 +83,18 @@ body {
   button {
     background-color: transparent;
     border: none;
+
     .fa-solid {
       font-size: 1.5rem;
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
-      background-image: linear-gradient(
-        90deg,
-        $secondary_color,
-        rgba(174, 86, 220, 0.9)
-      );
+      background-image: linear-gradient(90deg,
+          $secondary_color,
+          rgba(174, 86, 220, 0.9));
       display: none;
     }
+
     .fa-regular {
       font-size: 1.5rem;
     }
@@ -86,33 +102,42 @@ body {
     &:hover .fa-regular {
       display: none;
     }
+
     &:hover .fa-solid {
       cursor: pointer;
       display: block;
     }
   }
 }
+
 .title__menu--composition {
   display: block;
-
+  position: relative;
   margin-left: 20px;
+  width: fit-content;
 
   h3 {
     font-weight: 200;
   }
-  .entrees__border {
-    width: 12%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60%;
     background-color: #99e2d0;
-    height: 3px;
+    height: 10%;
+    bottom: -30%;
   }
 }
+
 .menu__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
-  width: 90%;
+  width: 94%;
   margin: 20px auto;
   margin-bottom: 60px;
+
   a {
     @include link;
   }
@@ -128,7 +153,7 @@ body {
   @include btn_shadow;
   background-color: white;
 
-  > div {
+  >div {
     grid-column: 1;
     display: block;
 
@@ -145,6 +170,7 @@ body {
       @include text-overflow;
     }
   }
+
   .price {
     display: flex;
     justify-content: center;
@@ -153,6 +179,7 @@ body {
     height: 100%;
     display: none;
   }
+
   span {
     margin-top: 10px;
     margin-right: 10px;
@@ -170,25 +197,35 @@ body {
       display: none;
     }
   }
+
   &:hover .price {
     display: flex;
   }
+
   &:hover .fa-circle-check {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     color: white;
-
     height: 100%;
   }
+
   &:hover .price__switch span {
     display: none;
   }
+
   &:hover .price__switch {
     background-color: $teritiary_color;
   }
 }
+
 .menu__card--button {
   height: 100px;
+}
+
+.menu__button {
+  &:hover {
+    background-color: #99e2d0;
+  }
 }

@@ -1,7 +1,6 @@
 @use "./abstract/variables";
 @use "./abstract/mixins" as *;
 @use "./base/global-rules" as *;
-
 @use "./component/buttons" as *;
 @use "./component/cards.scss" as *;
 @use "./layout/header" as *;

@@ -1,15 +1,26 @@
 $bg_color: rgb(246, 246, 246);
+
 @mixin center_divs {
   width: 50%;
   margin: auto;
   padding: 10px;
 }
+
 @mixin link {
   text-decoration: none;
   color: black;
+
   &:hover {
     cursor: pointer;
   }
+}
+
+@mixin input__placehoder--animation {
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in-out;
+  -moz-transition: opacity 200ms ease-in-out;
+  -moz-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
 }
 
 .location {
@@ -18,26 +29,43 @@ $bg_color: rgb(246, 246, 246);
   position: relative;
   width: 100%;
 }
+
 .location__block {
   display: flex;
   width: 200px;
   margin: auto;
-  gap: 10%;
+  gap: 8%;
   justify-content: flex-start;
   align-items: center;
   height: 50px;
 
-  ::before {
-    font-size: 1.2rem;
+  >input {
+    background-color: rgb(234, 234, 234);
+    border: none;
+
+    &::placeholder {
+      color: black;
+      font-size: 1.1rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      @include input__placehoder--animation;
+    }
   }
-  p {
-    font-size: 1.2rem;
-    font-weight: 400;
+
+  >label {
+    margin-left: 10px;
   }
 }
+
 .homePage__card--button {
   background-color: $bg_color;
   height: 270px;
+
   h1 {
     font-size: 24px;
     text-align: center;
@@ -45,6 +73,7 @@ $bg_color: rgb(246, 246, 246);
     margin: auto;
     padding-top: 40px;
   }
+
   p {
     width: 90%;
     margin: auto;
@@ -54,12 +83,14 @@ $bg_color: rgb(246, 246, 246);
     margin-top: 10px;
   }
 }
+
 section {
-  > h2 {
+  >h2 {
     width: 90%;
     margin: 20px auto;
   }
 }
+
 .fonctionnement {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -67,6 +98,7 @@ section {
   width: 90%;
   margin: 20px auto;
   margin-bottom: 60px;
+
   a {
     @include link;
   }
@@ -81,9 +113,11 @@ section {
   margin-bottom: 0px;
   background-color: $bg_color;
   padding-bottom: 60px;
+
   h2 {
     margin: 50px 20px 5px 20px;
   }
+
   a {
     @include link;
   }
