@@ -544,7 +544,7 @@ body {
   grid-column: 3;
   border-radius: 0px 10px 10px 0px;
   height: 100%;
-  transform: scalex(0);
+  transform: scaleX(0);
   transform-origin: right;
   transition: 0.2s linear;
 }
@@ -572,9 +572,6 @@ body {
   100% {
     transform: rotate(1turn);
   }
-}
-.menu__card--composition:hover .price__switch span {
-  display: none;
 }
 .menu__card--composition:hover .price__switch {
   background-color: #99e2d0;

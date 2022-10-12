@@ -178,7 +178,6 @@ body {
     align-items: center;
     grid-column: 2;
     height: 100%;
-    // display: none;
     margin-right: -150px;
     transform-origin: right;
     transition: 0.3s ease-in-out;
@@ -198,7 +197,7 @@ body {
     grid-column: 3;
     border-radius: 0px 10px 10px 0px;
     height: 100%;
-    transform: scalex(0);
+    transform: scaleX(0);
     transform-origin: right;
     transition: 0.2s linear;
 
@@ -233,15 +232,8 @@ body {
     }
   }
 
-  &:hover .price__switch span {
-    display: none;
-  }
-
   &:hover .price__switch {
     background-color: $teritiary_color;
-    // width: -100px;
-    // animation: mouvement 0.3s linear backwards;
-    // -webkit-animation: mouvement 0.3s linear backwards;
     transform: scaleX(1);
   }
 }
