@@ -1,4 +1,7 @@
 $bg_color: rgb(246, 246, 246);
+$primary_color: #9356dc;
+$secondary_color: #ff79da;
+$teritiary_color: #99e2d0;
 
 @mixin center_divs {
   width: 50%;
@@ -28,24 +31,36 @@ $bg_color: rgb(246, 246, 246);
   box-shadow: 0px 4px 2px rgb(211, 211, 211) inset;
   position: relative;
   width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+//done
 .location__block {
   display: flex;
-  width: 200px;
-  margin: auto;
-  gap: 8%;
-  justify-content: flex-start;
   align-items: center;
-  height: 50px;
+  gap: 8px;
+  width: 220px;
+  margin: auto;
+  height: 40px;
+  border: 1px solid rgb(216 212 212);
+  background-color: rgb(237, 237, 237);
+
+  &:active {
+    border-color: #9356dc;
+  }
 
   >input {
-    background-color: rgb(234, 234, 234);
-    border: none;
+    background-color: rgb(237, 237, 237);
+    width: 160px;
+    border: transparent;
 
     &::placeholder {
-      color: black;
+      color: rgb(197, 197, 197);
       font-size: 1.1rem;
+      text-align: center;
     }
 
     &:focus {

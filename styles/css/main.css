@@ -265,24 +265,34 @@ body {
   box-shadow: 0px 4px 2px rgb(211, 211, 211) inset;
   position: relative;
   width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .location__block {
   display: flex;
-  width: 200px;
-  margin: auto;
-  gap: 8%;
-  justify-content: flex-start;
   align-items: center;
-  height: 50px;
+  gap: 8px;
+  width: 220px;
+  margin: auto;
+  height: 40px;
+  border: 1px solid rgb(216, 212, 212);
+  background-color: rgb(237, 237, 237);
+}
+.location__block:active {
+  border-color: #9356dc;
 }
 .location__block > input {
-  background-color: rgb(234, 234, 234);
-  border: none;
+  background-color: rgb(237, 237, 237);
+  width: 160px;
+  border: transparent;
 }
 .location__block > input::placeholder {
-  color: black;
+  color: rgb(197, 197, 197);
   font-size: 1.1rem;
+  text-align: center;
 }
 .location__block > input:focus {
   outline: none;
@@ -365,7 +375,7 @@ body {
 }
 
 .img__container--menu1 {
-  background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -376,7 +386,7 @@ body {
 }
 
 .img__container--menu2 {
-  background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-image: url(../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -387,7 +397,7 @@ body {
 }
 
 .img__container--menu3 {
-  background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-image: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -398,7 +408,7 @@ body {
 }
 
 .img__container--menu4 {
-  background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-image: url(../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -472,7 +482,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
-  width: 94%;
+  width: 90%;
   margin: 20px auto;
   margin-bottom: 60px;
 }
@@ -517,25 +527,35 @@ body {
   align-items: center;
   grid-column: 2;
   height: 100%;
-  display: none;
+  margin-right: -150px;
+  transform-origin: right;
+  transition: 0.3s ease-in-out;
 }
 .menu__card--composition span {
   margin-top: 10px;
   margin-right: 10px;
+  font-size: 14px;
 }
 .menu__card--composition .price__switch {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   grid-column: 3;
   border-radius: 0px 10px 10px 0px;
   height: 100%;
+  transform: scalex(0);
+  transform-origin: right;
+  transition: 0.2s linear;
 }
 .menu__card--composition .price__switch .fa-circle-check {
   display: none;
+  animation: loading 0.3s linear;
+  -webkit-animation: loading 0.3s linear;
 }
 .menu__card--composition:hover .price {
   display: flex;
+  margin-right: -40px;
 }
 .menu__card--composition:hover .fa-circle-check {
   display: flex;
@@ -545,11 +565,20 @@ body {
   color: white;
   height: 100%;
 }
+@keyframes loading {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
 .menu__card--composition:hover .price__switch span {
   display: none;
 }
 .menu__card--composition:hover .price__switch {
   background-color: #99e2d0;
+  transform: scaleX(1);
 }
 
 .menu__card--button {
