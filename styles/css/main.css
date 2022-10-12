@@ -527,13 +527,13 @@ body {
   align-items: center;
   grid-column: 2;
   height: 100%;
-  margin-right: -150px;
+  margin-top: 3px;
+  margin-left: 0px;
   transform-origin: right;
   transition: 0.3s ease-in-out;
 }
 .menu__card--composition span {
   margin-top: 10px;
-  margin-right: 10px;
   font-size: 14px;
 }
 .menu__card--composition .price__switch {
@@ -549,13 +549,14 @@ body {
   transition: 0.2s linear;
 }
 .menu__card--composition .price__switch .fa-circle-check {
+  position: relative;
   display: none;
   animation: loading 0.3s linear;
   -webkit-animation: loading 0.3s linear;
 }
 .menu__card--composition:hover .price {
   display: flex;
-  margin-right: -40px;
+  margin-left: 30px;
 }
 .menu__card--composition:hover .fa-circle-check {
   display: flex;
@@ -586,6 +587,24 @@ body {
   background-color: #99e2d0;
 }
 
+@media screen and (max-width: 767px) {
+  .menu__card--composition .price {
+    margin-left: 90px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .img__container--menu1,
+.img__container--menu2,
+.img__container--menu3,
+.img__container--menu4 {
+    height: 500px;
+  }
+}
+@media screen and (min-width: 462px) {
+  .menu__card--composition .price {
+    margin-left: 50px;
+  }
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
