@@ -3,31 +3,35 @@
   margin: auto;
   padding: 10px;
 }
+
 @mixin btn_shadow {
   box-shadow: 0px 75px 5px rgba(220, 215, 215, 0.9);
 }
+
 @mixin link {
   text-decoration: none;
   color: black;
+
   &:hover {
     cursor: pointer;
   }
 }
+
 @mixin like__heart {
   background-color: transparent;
   border: none;
+
   .fa-solid {
     font-size: 1.5rem;
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    background-image: linear-gradient(
-      90deg,
-      $secondary_color,
-      rgba(174, 86, 220, 0.9)
-    );
+    background-image: linear-gradient(90deg,
+        $secondary_color,
+        rgba(174, 86, 220, 0.9));
     display: none;
   }
+
   .fa-regular {
     font-size: 1.5rem;
   }
@@ -35,11 +39,13 @@
   &:hover .fa-regular {
     display: none;
   }
+
   &:hover .fa-solid {
     cursor: pointer;
     display: block;
   }
 }
+
 @mixin menu-img {
   background-size: cover;
   width: 100%;
@@ -47,11 +53,29 @@
   // zoom: 1.2;
   background-position: 50%;
 }
+
 @mixin text-overflow {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
 @mixin btn__shadow--hover {
   box-shadow: 0px 8px 8px rgba(149, 143, 143, 0.9);
+}
+
+@mixin loader {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  opacity: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hide__loader 0.75s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.8s;
 }
