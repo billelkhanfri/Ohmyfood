@@ -1,0 +1,52 @@
+$primary_color: #9356dc;
+$secondary_color: #ff79da;
+$teritiary_color: #99e2d0;
+$bg_color: rgb(246, 246, 246);
+
+.loader {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  opacity: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hide__loader 0.75s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.8s;
+
+  &::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 6px solid lightsalmon;
+    border-radius: 50%;
+    border-color: $primary_color $secondary_color $teritiary_color transparent;
+    animation: loading 0.5s linear infinite;
+    -webkit-animation: loading 0.5s linear infinite;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0turn);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes hide__loader {
+  80% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

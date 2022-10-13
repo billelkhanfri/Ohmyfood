@@ -3,18 +3,9 @@
 @use "./abstract/mixins" as *;
 @use "./base/typography.scss" as *;
 @use "./layout/header" as *;
+@use "./component/loaders";
 @use "./pages/home_page" as *;
 @use "./pages/menu.scss" as *;
 @use "./component/buttons" as *;
 @use "./component/cards.scss" as *;
 @use "./layout/footer" as *;
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
