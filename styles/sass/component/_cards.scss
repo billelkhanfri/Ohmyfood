@@ -75,13 +75,31 @@ $gradient: linear-gradient(90deg, $secondary_color, rgba(174, 86, 220, 0.9));
       font-size: 1.5rem;
     }
 
-    &:hover .fa-regular {
+    &:active .fa-regular {
       display: none;
     }
 
-    &:hover .fa-solid {
+    &:active .fa-solid {
       cursor: pointer;
       display: block;
+      animation: remplissage ease-in-out 0.75s;
+    }
+
+    @keyframes remplissage {
+      0% {
+        opacity: 0;
+        height: 0%;
+      }
+
+      50% {
+        opacity: 0.5;
+        height: 50%;
+      }
+
+      100% {
+        opacity: 1;
+        height: 100%;
+      }
     }
   }
 
