@@ -293,6 +293,8 @@ section > h2 {
   cursor: pointer;
   display: block;
   animation: remplissage ease-in-out 0.75s;
+  -webkit-animation: remplissage ease-in-out 0.75s;
+  -moz-animation: remplissage ease-in-out 0.75s;
 }
 @keyframes remplissage {
   0% {
@@ -738,6 +740,8 @@ footer li a {
     cursor: pointer;
     display: block;
     animation: remplissage ease-in-out 0.75s;
+    -webkit-animation: remplissage ease-in-out 0.75s;
+    -moz-animation: remplissage ease-in-out 0.75s;
   }
   @keyframes remplissage {
     0% {

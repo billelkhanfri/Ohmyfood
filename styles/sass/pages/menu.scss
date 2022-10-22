@@ -113,6 +113,8 @@ $bg_color: rgb(246, 246, 246);
       cursor: pointer;
       display: block;
       animation: remplissage ease-in-out 0.75s;
+      -webkit-animation: remplissage ease-in-out 0.75s;
+      -moz-animation: remplissage ease-in-out 0.75s;
     }
   }
   @keyframes remplissage {

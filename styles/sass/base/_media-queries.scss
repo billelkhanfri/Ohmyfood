@@ -113,6 +113,8 @@ $gradient: linear-gradient(90deg, $secondary_color, rgba(174, 86, 220, 0.9));
           cursor: pointer;
           display: block;
           animation: remplissage ease-in-out 0.75s;
+          -webkit-animation: remplissage ease-in-out 0.75s;
+          -moz-animation: remplissage ease-in-out 0.75s;
         }
       }
     }
