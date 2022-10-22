@@ -93,9 +93,11 @@ $bg_color: rgb(246, 246, 246);
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
-      background-image: linear-gradient(90deg,
-          $secondary_color,
-          rgba(174, 86, 220, 0.9));
+      background-image: linear-gradient(
+        90deg,
+        $secondary_color,
+        rgba(174, 86, 220, 0.9)
+      );
       display: none;
     }
 
@@ -110,6 +112,23 @@ $bg_color: rgb(246, 246, 246);
     &:active .fa-solid {
       cursor: pointer;
       display: block;
+      animation: remplissage ease-in-out 0.75s;
+    }
+  }
+  @keyframes remplissage {
+    0% {
+      opacity: 0;
+      height: 0%;
+    }
+
+    50% {
+      opacity: 0.5;
+      height: 50%;
+    }
+
+    100% {
+      opacity: 1;
+      height: 100%;
     }
   }
 }
@@ -190,7 +209,7 @@ a {
     @include btn_shadow;
     background-color: white;
 
-    >div {
+    > div {
       grid-column: 1;
       display: block;
 
